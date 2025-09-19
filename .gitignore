@@ -1,0 +1,16 @@
+# Ambientes Virtuais
+venv/
+*.venv
+env/
+.env
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Outros
+.vscode/
+.idea/
+*.egg-info/
