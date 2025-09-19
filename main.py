@@ -33,7 +33,7 @@ client = discord.Client(intents=intents)
 async def on_ready():
     """Imprime uma mensagem de confirmação no console quando o bot está online."""
     print(f'Bot conectado como {client.user}')
-    print('Pronto para ler imagens com o comando +ocr')
+    print('Pronto para ler imagens com o comando !ocr')
     print('------')
 
 @client.event
@@ -42,10 +42,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.lower().startswith('+ocr'):
+    if message.content.lower().startswith('!ocr'):
         
         if not message.attachments:
-            await message.reply("⚠️ Ops! Você precisa anexar uma imagem junto com o comando `+ocr`.")
+            await message.reply("⚠️ Ops! Você precisa anexar uma imagem junto com o comando `!ocr`.")
             return
 
         attachment = message.attachments[0]
